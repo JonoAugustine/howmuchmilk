@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Much Milk</title>
+  </head>
+  <body>
+    <header>
+      <h1>How Much Milk?</h1>
+      <h3>US-pounds converter to Gallons on Milk</h3>
+    </header>
+    <main>
+      <section id="input">
+        <input type="number" name="weight" id="weight" placeholder="input weight" />
+      </section>
+      <section id="result">
+        <p id="input_show">8.6</p>
+        <p>lbs is</p>
+        <p id="result_show">1</p>
+        <p>gallons of milk.</p>
+      </section>
+    </main>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background-color: #333333;
+        color: white;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      main {
+        text-align: center;
+      }
+
+      input {
+        text-align: center;
+        background-color: transparent;
+        color: unset;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid white;
+      }
+
+      section#result > * {
+        display: inline-block;
+      }
+    </style>
+
+    <script>
+      document.getElementById("weight").onchange = e => {
+        document.getElementById("input_show").textContent = e.target.value;
+        document.getElementById("result_show").textContent = parseFloat(e.target.value) * 8.6;
+      };
+    </script>
+  </body>
+</html>
